@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.service_name }}
+  labels:
+    servicemonitor/php-fpm-exporter: ""
+spec:
+  clusterIP: None
+  ports:
+{{- range $key, $value := .Values.containers }}
+    - name: {{ $key }}
+      port: {{ index . "port"}}
+      protocol: TCP
+{{- end }}
+  selector:
+{{- range $key, $value := .Values.pod_labels }}
+    {{ $key }}: {{ $value }}
+{{- end }}

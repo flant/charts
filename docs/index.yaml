@@ -1,0 +1,11 @@
+apiVersion: v1
+entries:
+  php_fpm_exporter:
+  - apiVersion: v1
+    created: 2017-11-08T04:35:11.80096085+03:00
+    digest: 1e58116f2823b807623970b3d60fcc5ed5203567a21c1a56b97903bed5290a9f
+    name: php_fpm_exporter
+    urls:
+    - https://flant.github.io/charts/php_fpm_exporter-0.2.0.tgz
+    version: 0.2.0
+generated: 2017-11-08T04:35:11.800610863+03:00
