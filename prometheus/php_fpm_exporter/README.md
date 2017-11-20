@@ -17,19 +17,19 @@ spec:
         prometheus-exporter: php-fpm
     spec:
       containers:
-{{- include "php-fpm-exporter-container" .Values.php_fpm_exporter.containers.first }}
+{{- include "php-fpm-exporter-container" .Values.php_fpm_exporter.containers.first | indent 6 }}
 ```
 
 ### values.yaml
 
 ```yaml
-php-fpm-exporter: # subchart name
+php_fpm_exporter: # subchart name
   containers:
     first: # you can specify multiple container contexts
       port: 5132 # port for php-fpm-exporter container
       endpoint: "http://127.0.0.1:80/status" # php-fpm status page URL
   service_name: hlebalo-php-fpm-metrics # name of created Service
-  pod_labels: # map of pod labels to populate service selector
+  pod_labels: # map of pod labels to populate Service selector
     prometheus-exporter: php-fpm
 ```
 
