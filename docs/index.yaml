@@ -2,15 +2,23 @@ apiVersion: v1
 entries:
   elasticsearch_exporter:
   - apiVersion: v1
-    created: 2017-11-20T01:48:50.363446106+03:00
+    created: 2017-11-21T23:15:40.623379981+03:00
     digest: cb315ceb859eb39e824bf2948c700acd2dbc87775015af87a40cc52d354d2f28
     name: elasticsearch_exporter
     urls:
     - https://flant.github.io/charts/elasticsearch_exporter-0.0.8.tgz
     version: 0.0.8
+  mongodb_exporter:
+  - apiVersion: v1
+    created: 2017-11-21T23:15:40.623579086+03:00
+    digest: 1966ce29bde8d5d1ca05c7d6a97c786ebf925921658d64905a4fc36146f98a52
+    name: mongodb_exporter
+    urls:
+    - https://flant.github.io/charts/mongodb_exporter-0.0.2.tgz
+    version: 0.0.2
   php_fpm_exporter:
   - apiVersion: v1
-    created: 2017-11-20T01:48:50.363732629+03:00
+    created: 2017-11-21T23:15:40.623786075+03:00
     digest: 1e58116f2823b807623970b3d60fcc5ed5203567a21c1a56b97903bed5290a9f
     name: php_fpm_exporter
     urls:
@@ -18,7 +26,7 @@ entries:
     version: 0.2.0
   redis_exporter:
   - apiVersion: v1
-    created: 2017-11-20T01:48:50.363927936+03:00
+    created: 2017-11-21T23:15:40.623928527+03:00
     digest: 191cdbeaa6767645c57c0b0d6642082364387703c163e6ec93412018feee5d1d
     name: redis_exporter
     urls:
@@ -26,10 +34,10 @@ entries:
     version: 0.0.7
   rmq_exporter:
   - apiVersion: v1
-    created: 2017-11-20T01:48:50.364223976+03:00
+    created: 2017-11-21T23:15:40.624207629+03:00
     digest: 8b5815e73c0fc1c85b5e6192db23775a9d87315baa512289161f73e3b49117bf
     name: rmq_exporter
     urls:
     - https://flant.github.io/charts/rmq_exporter-0.0.2.tgz
     version: 0.0.2
-generated: 2017-11-20T01:48:50.362523653+03:00
+generated: 2017-11-21T23:15:40.623127838+03:00

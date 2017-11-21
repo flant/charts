@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ default "mongodb-exporter" .Values.service_name }}
+  labels:
+    servicemonitor/mongodb-exporter: ""
+spec:
+  clusterIP: None
+  ports:
+  - name: metrics
+    port: {{ default 5132 .Values.service_port }}
+    protocol: TCP
+  selector:
+    prometheus-exporter: mongodb
