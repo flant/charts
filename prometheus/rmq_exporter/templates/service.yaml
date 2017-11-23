@@ -7,7 +7,8 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - port: {{ default 5132 .Values.service_port }}
+  - name: rmq-metrics
+    port: rmq-metrics
     protocol: TCP
   selector:
     prometheus-exporter: rmq

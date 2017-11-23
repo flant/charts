@@ -7,8 +7,8 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - name: metrics
-    port: {{ default 5132 .Values.service_port }}
+  - name: mongodb-metrics
+    port: mongodb-metrics
     protocol: TCP
   selector:
     prometheus-exporter: mongodb

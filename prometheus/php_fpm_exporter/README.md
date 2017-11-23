@@ -37,7 +37,7 @@ php_fpm_exporter: # subchart name
 
 ### nginx
 
-```
+```nginx
 location = /status {
     allow 127.0.0.0/8;
     deny all;
@@ -51,4 +51,28 @@ location = /status {
 
 ```
 pm.status_path = /status
+```
+
+## Prometheus Operator
+
+### ServiceMonitor
+
+```yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    k8s-app: php-fpm-exporter
+  name: php-fpm-exporter
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: php-fpm-metrics
+  jobLabel: php-fpm
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      servicemonitor/php-fpm-exporter: "(.*)"
 ```

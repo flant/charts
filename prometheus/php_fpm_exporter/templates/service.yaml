@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.service_name }}
+  name: {{ default "php-fpm-metrics" .Values.service_name }}
   labels:
     servicemonitor/php-fpm-exporter: ""
 spec:
   clusterIP: None
   ports:
-{{- range $key, $value := .Values.containers }}
-    - name: {{ $key }}
-      port: {{ index . "port"}}
+    - name: php-fpm-metrics
+      port: php-fpm-metrics
       protocol: TCP
 {{- end }}
   selector:

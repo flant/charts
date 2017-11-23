@@ -7,7 +7,7 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - port: {{ default 5132 .Values.service_port }}
+  - port: redis-metrics
     protocol: TCP
   selector:
     prometheus-exporter: redis
